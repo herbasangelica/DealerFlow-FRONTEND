@@ -10,7 +10,7 @@ const BrandsTable = () => {
 
 	const fetchBrands = async () => {
 		try {
-			const response = await axios.get("http://localhost:8000/api/car/brand");
+			const response = await axios.get("https://dealerflow-backend-api-jrt9.onrender.com/api/car/brand");
 			setBrands(response.data);
 		} catch (error) {
 			console.error("Error fetching brands:", error);
