@@ -21,7 +21,7 @@ function ShowAllDealersVehicles() {
   const getVehicles = useCallback(async () => {
     try {
       setIsLoading(true);
-      let url = `http://localhost:8000/api/dealerVehicles/${dealerId}?page=${currentPage}&limit=${vehiclesPerPage}`;
+      let url = `http://localhost:8000/api/car/dealerVehicles/${dealerId}?page=${currentPage}&limit=${vehiclesPerPage}`;
       const response = await axios.get(url);
       const { models, currentPage: page, totalPages } = response.data;
       if (models.length === 0) {
@@ -43,7 +43,7 @@ function ShowAllDealersVehicles() {
   const getDealerVehicle = useCallback(async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/salesByDealer/${dealerId}`
+        `http://localhost:8000/api/car/salesByDealer/${dealerId}`
       );
       console.log(response.data);
       setdealerVehicles(response.data); // Assuming setDealerVehicles is a state setter function
