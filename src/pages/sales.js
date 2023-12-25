@@ -7,7 +7,7 @@ function SalesLastThreeYears() {
 
 	const getSalesLastThreeYears = async () => {
 		try {
-			const response = await axios.get("http://localhost:8000/api/car/sales");
+			const response = await axios.get("https://dealerflow-backend-api-jrt9.onrender.com/api/car/sales");
 			console.log(response.data);
 			setsalesLastThreeYears(response.data);
 		} catch (error) {

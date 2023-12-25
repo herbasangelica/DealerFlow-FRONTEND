@@ -15,7 +15,7 @@ function CarModelByBrand() {
 
   const getVehicles = useCallback(async () => {
     try {
-      let url = `http://localhost:8000/api/car/model/${brandId}?page=${currentPage}&limit=${vehiclesPerPage}`;
+      let url = `https://dealerflow-backend-api-jrt9.onrender.com//api/car/model/${brandId}?page=${currentPage}&limit=${vehiclesPerPage}`;
       const response = await axios.get(url);
       const {
         models,

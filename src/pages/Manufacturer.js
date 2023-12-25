@@ -20,7 +20,7 @@ const BrandsTable = () => {
 	const getManufacturer = async () => {
 		try {
 			const response = await axios.get(
-				"http://localhost:8000/api/car/manufacturerVehicle"
+				"https://dealerflow-backend-api-jrt9.onrender.com/api/car/manufacturerVehicle"
 			);
 			console.log(response.data);
 			setManufacturer(response.data);

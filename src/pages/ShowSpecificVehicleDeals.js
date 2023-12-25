@@ -18,7 +18,7 @@ function ShowSpecificVehicleDeals() {
 	const getVehicles = useCallback(async () => {
 		try {
 			setIsLoading(true);
-			let url = `http://localhost:8000/api/car/dealerVehicle/${modelId}?page=${currentPage}&limit=${vehiclesPerPage}`;
+			let url = `https://dealerflow-backend-api-jrt9.onrender.com/api/car/dealerVehicle/${modelId}?page=${currentPage}&limit=${vehiclesPerPage}`;
 			const response = await axios.get(url);
 			const { models, currentPage: page, totalPages } = response.data;
 

@@ -43,7 +43,7 @@ export default function Register() {
 		}
 
 		axios
-			.post("http://localhost:8000/api/auth/register", {
+			.post("https://dealerflow-backend-api-jrt9.onrender.com/api/auth/register", {
 				username,
 				password,
 			})
